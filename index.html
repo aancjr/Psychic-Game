@@ -6,25 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic-Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
 <body>
 
-    <section class="game">
-        <h1>Psychic Game!</h1>
-        <h3>Guess what letter I'm thinking of</h3>
-        <p id="instructionsText">Press any letter to begin guessing!</p>
+    <div class="top-margin">
+        <div class="margin-container">
+            <row class="blank"></row>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Psychic Game!</h1>
+          <h3 class="lead">Guess what letter I'm thinking of!</h3>
+          <p id="instructionsText">Press any letter to begin guessing!</p>
 
 
-        <p id="winsText">Wins:</p>
-        <p id="lossesText">Losses:</p>
-        <p id="guessesLeftText">Guesses Left:</p>
-        <p id="userChoiceText">Letter's Guessed:</p>
-        
-    </section>
-
-
+          <p id="winsText">Wins:</p>
+          <p id="lossesText">Losses:</p>
+          <p id="guessesLeftText">Guesses Left:</p>
+          <p id="userChoiceText">Letter's Guessed:</p> 
+        </div>
+      </div>
     
 </body>
 </html>
