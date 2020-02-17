@@ -1,36 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Psychic-Game</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="h-100 d-flex ">
+      <div class="box rounded mx-auto my-auto">
+        <div class="container my-3">
+          <div class="row">
+            <button
+              type="button"
+              class="btn btn-primary btn-sm ml-3"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Gameplay Instructions
+            </button>
+          </div>
 
-</head>
-<body>
-
-    <div class="top-margin">
-        <div class="margin-container">
-            <row class="blank"></row>
-        </div>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Psychic Game!</h1>
-          <h3 class="lead">Guess what letter I'm thinking of!</h3>
-          <p id="instructionsText">Press any letter to begin guessing!</p>
-
-
-          <p id="winsText">Wins:</p>
-          <p id="lossesText">Losses:</p>
-          <p id="guessesLeftText">Guesses Left:</p>
-          <p>Guessed Letters:</p><p id="userChoiceText"></p> 
+          <div class="row mb-3">
+            <h1 class="display-4 center">Psychic Game!</h1>
+          </div>
+          <div class="row mb-2">
+            <h3 class="lead center">Guess what letter I'm thinking of!</h3>
+          </div>
+          <!-- <div class="row mb-2">
+            <p class="instructionsText center">
+              Press any letter to begin guessing!
+            </p>
+          </div> -->
+          <div class="row mb-4">
+            <div class="column center">
+              <p id="winsText" class="center">Wins:</p>
+            </div>
+            <div class="column center">
+              <p id="lossesText" class="center">Losses:</p>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <p id="guessesLeftText" class="center">Guesses Left:</p>
+          </div>
+          <div class="row">
+            <p class="center">
+              Guessed Letters: <span id="userChoiceText"></span>
+            </p>
+          </div>
         </div>
       </div>
-    
-</body>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Gameplay Instructions
+            </h5>
+          </div>
+          <div class="modal-body">
+            Psychic-Game let's connect with your inner powers to guess the
+            computer's chosen letter. Each game provides you with 9 chances to
+            choose the computer's letter. Use the keyboard to pick your letters.
+            Picked letters will show to prevent you from picking the same letter
+            more than once. If you pick the same letter as the computer before
+            your 9 guess are up, you win! Otherwise, you lose. After each game,
+            win or lose, the computer will pick a new letter and your number
+            of chances to guess will automatically reset.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Begin!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
 </html>
