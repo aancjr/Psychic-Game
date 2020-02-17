@@ -5,6 +5,7 @@ body {
 
 .box {
   width: 960px;
+  height: 400px;
   background-color: rgb(233, 233, 233);
 }
 

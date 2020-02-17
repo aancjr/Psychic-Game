@@ -37,7 +37,6 @@ var guessedLetters = [];
 //The computers choice.
 var computerGuess =
   computerChoices[Math.floor(Math.random() * computerChoices.length)];
-console.log(computerGuess);
 
 function resetGame() {
   computerGuess =
@@ -45,7 +44,17 @@ function resetGame() {
   guesses = 9;
   guessedLetters.length = 0;
   document.getElementById("userChoiceText").textContent = "";
+  document.getElementById("guessesLeftText").textContent =
+    "Guesses Left: " + guesses;
 }
+
+resetScore = () => {
+  wins = 0;
+  losses = 0;
+  document.getElementById("winsText").textContent = "Wins: " + wins;
+  document.getElementById("lossesText").textContent = "Losses: " + losses;
+  resetGame();
+};
 
 //Function for when users presses key.
 document.onkeyup = function(event) {
@@ -56,10 +65,17 @@ document.onkeyup = function(event) {
   if (playerGuess === computerGuess) {
     wins++;
     guesses = 9;
+    alert("You are correct! How did you do that?!");
     resetGame();
   } else if (guesses === 1) {
     losses++;
     guesses = 9;
+    alert(
+      "You're going to have to try harder than that! The computer chose the letter " +
+        "'" +
+        computerGuess +
+        "'"
+    );
     resetGame();
   } else {
     guesses--;
@@ -74,6 +90,3 @@ document.onkeyup = function(event) {
   document.getElementById("guessesLeftText").textContent =
     "Guesses Left: " + guesses;
 };
-
-console.log(guesses);
-console.log(guessedLetters);

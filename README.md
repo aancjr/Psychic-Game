@@ -1,8 +1,8 @@
 # Psychic-Game
 
-# Overview
+## Overview
 
-Create a game that will run in the browser and dynamically update for the user.
+Create a guessing-style game that will run in the browser and dynamically update for the user.
 
 # Details
 
